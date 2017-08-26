@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HotelFeeLessEqual15000</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(ISPICKVAL(Uses__c, '宿泊費'), Cost__c > 15000)</errorConditionFormula>
+    <errorMessage>宿泊費は、15,000円以下にしてください。</errorMessage>
+</ValidationRule>

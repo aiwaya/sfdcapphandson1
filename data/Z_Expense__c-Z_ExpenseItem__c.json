@@ -1,0 +1,63 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "Z_Expense__c",
+                "referenceId": "Z_Expense__cRef1"
+            },
+            "Name": "大阪出張",
+            "ExpenseItemR__r": {
+                "records": [
+                    {
+                        "attributes": {
+                            "type": "Z_ExpenseItem__c",
+                            "referenceId": "Z_ExpenseItem__cRef1"
+                        },
+                        "Date__c": "2017-08-26",
+                        "Uses__c": "食費",
+                        "Cost__c": 1500,
+                        "Note__c": "昼食代"
+                    },
+                    {
+                        "attributes": {
+                            "type": "Z_ExpenseItem__c",
+                            "referenceId": "Z_ExpenseItem__cRef2"
+                        },
+                        "Date__c": "2017-08-26",
+                        "Uses__c": "交通費",
+                        "Cost__c": 32000,
+                        "Note__c": "新幹線代金"
+                    },
+                    {
+                        "attributes": {
+                            "type": "Z_ExpenseItem__c",
+                            "referenceId": "Z_ExpenseItem__cRef3"
+                        },
+                        "Date__c": "2017-08-26",
+                        "Uses__c": "交際費",
+                        "Cost__c": 24000
+                    },
+                    {
+                        "attributes": {
+                            "type": "Z_ExpenseItem__c",
+                            "referenceId": "Z_ExpenseItem__cRef4"
+                        },
+                        "Date__c": "2017-08-26",
+                        "Uses__c": "宿泊費",
+                        "Cost__c": 12000
+                    },
+                    {
+                        "attributes": {
+                            "type": "Z_ExpenseItem__c",
+                            "referenceId": "Z_ExpenseItem__cRef5"
+                        },
+                        "Date__c": "2017-08-26",
+                        "Uses__c": "タクシー代",
+                        "Cost__c": 1200,
+                        "Note__c": "大阪駅から本社ビルまで"
+                    }
+                ]
+            }
+        }
+    ]
+}

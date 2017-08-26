@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+SCRIPT_DIR=$(cd $(dirname $0); pwd)
+cd $SCRIPT_DIR
+for i in {3..4}
+
+do
+  sfdx force:org:create edition=developer -a test$i
+  sfdx force:user:password:generate -u test$i
+  sfdx force:source:push -u test$i
+  sfdx force:user:permset:assign -n Z_InhouseApplicationPermset -u test$i
+  sfdx force:data:tree:import -u test$i -f $SCRIPT_DIR/data/Z_Expense__c-Z_ExpenseItem__c.json
+done
