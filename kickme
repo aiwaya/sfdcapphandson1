@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 SCRIPT_DIR=$(cd $(dirname $0); pwd)
 cd $SCRIPT_DIR
-sfdx force:org:create edition=developer -a test
-sfdx force:user:password:generate -u test
-sfdx force:source:push -u test
-sfdx force:user:permset:assign -n Z_InhouseApplicationPermset -u test
-sfdx force:data:tree:import -u test -f $SCRIPT_DIR/data/Z_Expense__c-Z_ExpenseItem__c.json
-sfdx force:org:open -u test
+sf org create scratch -d -f config/project-scratch-def.json -a $1
+sf force user password generate --length 12 --target-org $1
+sf project deploy start --target-org $1 --ignore-conflicts --wait 10
+sf org assign permset --name Z_InhouseApplicationPermset --target-org $1
+sf data import tree --files $SCRIPT_DIR/data/Z_Expense__c-Z_ExpenseItem__c.json --target-org scratchOrg1
+sf org open --target-org $1
