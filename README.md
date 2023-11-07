@@ -1,14 +1,15 @@
 # SFDX  App
 
-## Dev, Build and Test
+組織リスト表示
+sfdx org list
 
+スクラッチ組織削除
+sfdx org:delete:scratch -o <alias>
 
-## Resources
+デフォルト組織指定
+sfdx force:config:set defaultusername=your@demo.com
 
-
-## Description of Files and Directories
-
-
-## Issues
+デフォルトDevHub組織指定
+sfdx config:set defaultdevhubusername=your@demo.com
 
 
